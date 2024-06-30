@@ -98,7 +98,7 @@ button {
   font-weight: bold;
 }
 
-form h1 {
+form.login h1, form.register h1{
   text-align: center;
   color: rgb(72, 68, 68);
 }
