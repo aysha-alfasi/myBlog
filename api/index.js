@@ -11,6 +11,7 @@ const secret = 'sdfghjkl;plokjhgfdsdfgtyhuiopjhgfdfghjkl';
 
 app.use(cors({credentials:true,origin:'http://localhost:3000'}));
 app.use(express.json());
+app.use()
 
 mongoose.connect(
   "mongodb+srv://ayshaalfassi:ufJ6iCXqSvcacqpg@cluster0.x1ifxne.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
@@ -44,6 +45,10 @@ res.cookie('token', token).json('ok');
 } else {
     res.status(400).json('wrong credentials');
 }
+});
+
+app.get('/profile', (req, res) => {
+    res.json(req.cookies);
 });
 
 app.listen(5000);

@@ -6,6 +6,7 @@ export default function Header () {
          <header>
       <Link to='/' className='logo'>Cute Blog</Link>
       <nav>
+        {/* now working on logged in status */}
       <Link to='/login' >Login</Link>
       <Link to='/register' >Register</Link>
       </nav>
