@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Post from '../../components/post/Post';
 
+
 export default function HomePage() {
 const [posts, setPosts] = useState([]);
     useEffect(() => {
@@ -12,6 +13,10 @@ response.json().then(posts => {
     }, []);
     return (
         <>
+         <div className='entry'>
+            <h3>Reading Time <br/>ـــــــــــــ</h3>
+             
+            </div>
         <div className='posts'>
    {
     posts.length > 0 && posts.map(post => (

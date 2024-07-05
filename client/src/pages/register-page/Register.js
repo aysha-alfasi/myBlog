@@ -1,4 +1,6 @@
 import { useState } from "react";
+import classes from '../login-page/SignUpSignIn.module.css';
+import welcome from '../../img/g17.png';
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -20,8 +22,11 @@ if (response.status === 200 ) {
   }
   return (
     <>
-      <form className="register" onSubmit={register}>
-        <h1>Register</h1>
+      <form className={classes.register} onSubmit={register}>
+      <div className={classes.registerCard}>
+        <h1>Welcome to the Soft Grow!</h1>
+        <img className={classes.welcome} src={welcome} alt="cute laptop happy" />
+        <label>Please choose cool username and strong password</label>
         <input
           type="text"
           placeholder="username"
@@ -34,7 +39,10 @@ if (response.status === 200 ) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button>Register</button>
+        <button className={classes.registerBtn}>Register</button>
+        <span>or</span>
+        <button className={classes.loginBtn}>Login</button>
+        </div>
       </form>
     </>
   );

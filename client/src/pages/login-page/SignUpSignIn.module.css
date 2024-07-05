@@ -1,0 +1,92 @@
+.login , .register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    background-color: rgba(250, 235, 215, 0.556);
+}
+
+.login h1, .register h1 {
+    margin-top: 7%;
+    font-family: 'Rowdies', monospace;
+    color: rgb(56, 53, 54);
+    font-weight: 300;
+ 
+
+}
+
+.welcome {
+   width: 200px;
+   height: 190px;
+    padding: 1rem;
+    margin-top: 40px;
+    align-self: center;
+    margin-bottom: 3%;
+
+}
+
+@media screen and (max-width: 600px) {
+    .welcome{
+      
+  margin-bottom: 10%;
+    }
+
+    
+  }
+
+  .loginCard, .registerCard {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 500px;
+    height: 700px;
+    background-color: #E0FBE2;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border-radius: 10px;
+  }
+
+
+
+.login input , .register input {
+    width: 300px;
+    height: 40px;
+    align-self: center;
+    margin-bottom: 1%;
+    border-radius: 25px;
+    border: solid 1.3px rgb(45, 43, 43);
+}
+.login label, .register label {
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+.loginBtn, .registerBtn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 4px;
+    color: rgb(44, 43, 43);
+    font-weight: 500;
+    margin-bottom:1px;
+    align-self: center;
+    border: solid 1.3px rgb(45, 43, 43);
+    margin-top: 5px;
+    
+}
+
+.loginBtn {
+    background-color: rgb(255, 213, 229);
+}
+
+.registerBtn {
+    background-color: rgb(248, 244, 130);
+}
+
+.loginBtn:hover, .registerBtn:hover {
+    cursor: pointer;
+    background-color: rgba(169, 244, 169, 0.802);
+}

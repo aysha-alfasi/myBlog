@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { UserContext } from "../../UserContext";
+import welcome from '../../img/g17.png';
+import classes from './SignUpSignIn.module.css';
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -34,8 +36,11 @@ if (response.ok) {
 
   return (
     <>
-      <form className="login" onSubmit={login}>
-        <h1>Login</h1>
+      <form className={classes.login} onSubmit={login}>
+        <div className={classes.loginCard}>
+        <h1>Glad to see you again</h1>
+        <img className={classes.welcome} src={welcome} alt="cute laptop happy" />
+        <label>Please write your username and password</label>
         <input
           type="text"
           placeholder="username"
@@ -48,7 +53,10 @@ if (response.ok) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button>Login</button>
+        <button className={classes.loginBtn}>Login</button>
+        <span>or</span>
+        <button className={classes.registerBtn}>Register</button>
+        </div>
       </form>
     </>
   );

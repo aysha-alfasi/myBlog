@@ -33,16 +33,10 @@ setUserInfo(userInfo);
                 <nav>
                     {username && (
                         <>
-                        <span>Hello {username}</span>
-                            <Link to='/create'>Create new post</Link>
-                            <a onClick={logout}>Logout</a>
-                 {/*            <div className={classes.welcome}>
-                <h2>Welcome to our home</h2>
-                <p>Discover our nice  thoughts and articles </p>
-                <div className={classes.welcomeBtns}>
-                    <button>Create Post</button>
-                </div>
-            </div> */}
+                        <span ><div className={classes.theSpan}>{username}'s profile</div></span>
+                            <Link to='/create'><div className={classes.newPost}>Create Post</div></Link>
+                            <a onClick={logout} ><div className={classes.logout}>Logout</div></a>
+         
                         </>
                     )}
                     {!username && (
@@ -62,10 +56,7 @@ setUserInfo(userInfo);
 
                 </nav>
             </header>
-            <div className={classes.entry}>
-            <h3>Reading Time <br/>ـــــــــــــ</h3>
-             
-            </div>
+           
             
         </>
     );
