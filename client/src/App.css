@@ -262,3 +262,64 @@ a svg {
 .ql-toolbar:hover .ql-picker:hover {
   color: rgb(40, 141, 41) !important;
 } */
+
+/* 
+
+
+ */
+
+
+
+ button:hover .ql-stroke,
+ .ql-picker-label:hover .ql-stroke {
+   fill: none;
+   stroke: rgb(250, 132, 232) !important;
+ }
+
+ .ql-active .ql-stroke {
+  fill: none;
+  stroke: rgb(250, 132, 232) !important;
+}
+
+button:hover .ql-fill,
+.ql-picker-label:hover .ql-fill {
+  fill: plum !important;
+  stroke: none;
+}
+
+.ql-toolbar .ql-stroke {
+  fill: none !important;
+  stroke: rgb(247, 96, 177) !important;
+}
+
+.ql-toolbar:active .ql-stroke:active {
+  fill: none !important;
+  stroke: plum !important;
+}
+
+
+
+.ql-toolbar .ql-fill {
+  fill: #f98cbd !important;
+  stroke: none !important;
+
+}
+
+
+.ql-toolbar .ql-picker {
+  color: rgb(47, 46, 47) !important;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+ 
+.ql-toolbar .ql-snow {
+  border: none !important;
+}
+
+.ql-toolbar {
+  border:  none !important;
+}
+
+/* ql-selected .ql-stroke.ql-fill{fill:#06c}.ql-snow.ql-toolbar button:hover */

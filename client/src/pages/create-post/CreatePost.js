@@ -1,8 +1,9 @@
 import { useState } from "react";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { Navigate } from "react-router-dom";
 import Editor from "../../components/editor/Editor";
+import classes from './CreatePost.module.css';
+
 
 
 
@@ -35,12 +36,18 @@ setRedirect(true);
   } 
 
   return (
-    <form onSubmit={createPost}>
-      <input type="title" placeholder={"Title"} value={title} onChange={e => setTitle(e.target.value)}/>
-      <input type="summary" placeholder={"Summary"} value={summary} onChange={e => setSummary(e.target.value)} />
-      <input type="file" onChange={e => setFile(e.target.files)} />
+    <div className={classes.container}>
+    <form onSubmit={createPost} className={classes.Form}>
+      <div className={classes.textInputs}>
+      <input  className={classes.InputTitle} type="title" placeholder={"Title"} value={title} onChange={e => setTitle(e.target.value)}/>
+      <input className={classes.InputSummary} type="summary" placeholder={"Summary"} value={summary} onChange={e => setSummary(e.target.value)} />
+      <input className={classes.File} type="file" onChange={e => setFile(e.target.files)} />
+      </div>
       <Editor onChange={setContent} value={content} />
-      <button style={{ marginTop: "5px" }}>Create Post</button>
+      <div className={classes.CreatePostCont}>
+      <button className={classes.createPostBtn}>Create Post</button>
+      </div>
     </form>
+    </div>
   );
 }

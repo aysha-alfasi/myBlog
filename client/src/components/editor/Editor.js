@@ -1,6 +1,9 @@
-import ReactQuill from "react-quill";
+import { useQuill } from 'react-quilljs';
+import 'quill/dist/quill.snow.css';
 
 export default function Editor({ value, onChange }) {
+  const theme = 'snow';
+
     const modules = {
         toolbar: [
           [{ header: "1" }, { header: "2" }, { font: [] }],
@@ -32,14 +35,13 @@ export default function Editor({ value, onChange }) {
         "image",
         "video",
       ];
+
+      const { quillRef } = useQuill({ theme, modules, formats, value, onChange });
     
   return (
-    <ReactQuill
-      value={value}
-      onChange={onChange}
-      theme={'snow'}
-      modules={modules}
-      formats={formats}
-    />
+    <div style={{ width: '90%', height: 500, backgroundColor: '#FEE3EC', paddingBottom: 40, borderRadius: 5, alignSelf:'center', marginTop: 30}}>
+    <div ref={quillRef} 
+  />
+  </div>
   );
 }
