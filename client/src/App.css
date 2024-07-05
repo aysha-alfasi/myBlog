@@ -1,14 +1,35 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+body {
+  
+  /* background-color: rgb(255, 213, 229); */
+  background-image: url('./img/g11.png');
+  background-repeat:repeat;
+  /* background-position: right; */
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 30px;
+}
+/* 
 body {
   color: #FFC0D9;
 }
 
 img {
   max-width: 100%;
-  /* max-height: 500px; */
+  /* max-height: 500px;
 }
 
 main {
@@ -22,7 +43,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   align-items: center;
 }
 
@@ -39,8 +60,42 @@ header a.logo {
 header nav {
   display: flex;
   gap: 15px;
-
 }
+
+.welcome {
+  margin-bottom:250px;
+  text-align: center;
+  background-color: #ffeaf2;
+  padding: 50px;
+  border-radius: 5px;
+  color: rgb(49, 46, 46);
+  font-family: cursive;
+  display: flex;
+  flex-direction: column;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+div.welcome button {
+  background-color: #FFC0D9;
+  color: rgb(33, 32, 32);
+  padding: 20px 20px;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 200px;
+  margin-top: 5%;
+}
+
+div.welcome button:hover {
+  background-color: plum;
+}
+
 
 div.content {
 display: grid;
@@ -112,6 +167,7 @@ button {
 
 button:hover {
   cursor: pointer;
+ 
 }
 
 form.login h1, form.register h1{
@@ -152,3 +208,44 @@ div.postPage div.author {
 div.postPage div.postContent p{
 line-height: 1.6rem;
 }
+
+div.edit {
+text-align: center;
+margin-bottom: 20px;
+}
+a.editBtn {
+  background-color: #FFC0D9;
+  color: rgb(33, 32, 32);
+  padding: 15px 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+
+}
+
+a svg {
+  height: 20px ;
+} */
+
+/* .ql-toolbar .ql-stroke {
+  fill: none !important;
+  stroke: plum !important;
+}
+
+
+
+.ql-toolbar .ql-fill {
+  fill: #f98cbd !important;
+  stroke: none !important;
+
+}
+
+.ql-toolbar .ql-picker {
+  color: rgb(55, 49, 49) !important;
+}
+
+.ql-toolbar:hover .ql-picker:hover {
+  color: rgb(40, 141, 41) !important;
+} */

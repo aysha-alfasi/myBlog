@@ -1,27 +1,26 @@
 import { Link } from 'react-router-dom';
 import {formatISO9075} from 'date-fns';
+import classes from './Post.module.css';
 
-export default function Post({_id, title, summary, image, content, createdAt, author
+export default function Post({_id, title, summary, image, createdAt, author
 }) {
     return (
         <>
-        <div className='content'>
-  <div className='image'>
+<div className={classes.whole}>
     <Link to={`/post/${_id}`}>
-    <img src={'http://localhost:5000/'+image} alt='example image' />
+    <img className={classes.image} src={'http://localhost:5000/'+image} alt='example image' />
     </Link>
-  </div>
-  <div className='texts'>
+    <div className={classes.texts}>
   <Link to={`/post/${_id}`}>
   <h2>{title}</h2>
   </Link>
-  <p className='info'>
-    <a className='author'>{author.username}</a>
+  <p className={classes.info}>
+    <a className={classes.author}>{author.username}</a>
     <time>{formatISO9075(new Date(createdAt))}</time>
-  </p>
-  <p className='summary'>{summary}</p>
+    </p>
+  <p className={classes.summary}>{summary}</p>
   </div>
-    </div>
+  </div>
         </>
     );
 }
